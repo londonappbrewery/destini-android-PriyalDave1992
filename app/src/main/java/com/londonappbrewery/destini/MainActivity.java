@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         btn_top.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mStoryIndex == 1)
+                if(mStoryIndex == 1 || mStoryIndex == 2)
                 {
                     tv_storyTextView.setText(getResources().getString(R.string.T3_Story));
                     btn_top.setText(getResources().getString(R.string.T3_Ans1));
@@ -44,13 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     btn_bottom.setVisibility(View.GONE);
                     mStoryIndex = 0;
                 }
-                else if(mStoryIndex == 2)
-                {
-                    tv_storyTextView.setText(getResources().getString(R.string.T3_Story));
-                    btn_top.setText(getResources().getString(R.string.T3_Ans1));
-                    btn_bottom.setText(getResources().getString(R.string.T3_Ans2));
-                    mStoryIndex = 3;
-                }
+              
             }
         });
 
